@@ -1,0 +1,69 @@
+<!-- https://www.youtube.com/watch?v=HQopEEurQYE -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="#" class="logo">PULSARTER</a>
+      <div class="nav-links">
+        <ul>
+          <li class="active"><a href="#homeSection">Home</a></li>
+          <li><a href="#valuesSection">Values</a></li>
+          <li><a href="#projectsSection">Projects</a></li>
+          <li><a href="#picturesSection">Pictures</a></li>
+          <li><a href="#contactSection">Contact</a></li>
+        </ul>
+      </div>
+      <!-- <img src="img/menu-button-white.png" alt="menu hamburger" class="menu-hamburger"> -->
+      <div class="menu-hamburger" id="nav-icon4">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+    <header id="headerSection"></header>
+        
+    <div class="section" id="homeSection">
+      <h1>Home</h1>
+    </div>
+    <div class="section" id="valuesSection">
+      <h1>Values</h1>
+    </div>
+    <div class="section" id="projectsSection">
+      <h1>Projects</h1>
+    </div>
+    <div class="section" id="picturesSection">
+      <h1>Pictures</h1>
+    </div>
+    <div class="section" id="contactSection">
+      <h1>Contact</h1>
+    </div>
+    <a href="#headerSection">Top</a>
+  <script>
+    $(document).ready(function () {
+      $("#nav-icon4").click(function () {
+        $(this).toggleClass("open");
+      });
+      $
+    });
+  </script>
+  <script>
+    const menuHamburger = document.querySelector(".menu-hamburger");
+    const navLinks = document.querySelector(".nav-links");
+    menuHamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("mobile-menu");
+    });
+  </script>
+</html>
