@@ -5,11 +5,13 @@
   padding: 0;
   text-decoration: none;
   list-style: none; /*Retire puce des listes*/
+  border: 1px solid red;
 }
 
 html {
   scroll-behavior: smooth;
 }
+
 /* Setup de base */
 body {
   font-family: "Poppins";
@@ -25,8 +27,8 @@ header {
 
 .navbar {
   /* Passe Navbar par dessus l'image */
-  /* position: absolute;*/
-  position: fixed;
+  position: absolute;
+  /* position: sticky; */
   padding: 50px; /* Décolle NavBar des coins */
   display: flex; /* Aligne les éléments */
   justify-content: space-between; /* Ecarte les éléments */
