@@ -11,23 +11,22 @@
 //   }
 // }
 
-
-$(document).ready(function () {
-    
-    
-    $("#nav-icon4").click(function () {
-      $(this).toggleClass("open");
+document.addEventListener('DOMContentLoaded', () => {
+   
+    // Menu hamburger moves
+    const navIcon4 = document.querySelector("#nav-icon4");
+    navIcon4.addEventListener("click", () => {
+        navIcon4.classList.toggle("open");
+        console.log("testVanilla");
     });
 
-    // Menu hamburger moves
+    // Menu slider moves
     const menuHamburger = document.querySelector(".menu-hamburger");
     const navLinks = document.querySelector(".nav-links");
     menuHamburger.addEventListener("click", () => {
         navLinks.classList.toggle("mobile-menu");
         console.log("hello");
     });
-
-
 
     // Button to top
     let mybutton = document.getElementById("myBtn");
@@ -42,7 +41,7 @@ $(document).ready(function () {
         mybutton.style.display = "none";
     }
     }
-});
+}, false);
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
