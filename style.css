@@ -63,9 +63,33 @@ header {
 }
 
 /* Set élément actif en rouge */
-.navbar .nav-links ul li.active a {
-  color: brown;
+.navbar .nav-links ul li a.active {
+  color: #e31c18;
   font-weight: 600;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #e31c18;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #e31c18;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 .navbar .menu-hamburger {
@@ -76,7 +100,7 @@ header {
   /* width: 35px; */
 }
 
-#nav-icon4 {
+#mobile-menu-icon {
   width: 30px;
   height: 30px;
   position: relative;
@@ -94,7 +118,7 @@ header {
   cursor: pointer;
 }
 
-#nav-icon4 span {
+#mobile-menu-icon span {
   display: block;
   position: absolute;
   height: 5px;
@@ -113,7 +137,7 @@ header {
   transition: 0.25s ease-in-out;
 }
 
-#nav-icon4 span:nth-child(1) {
+#mobile-menu-icon span:nth-child(1) {
   top: 0px;
   -webkit-transform-origin: left center;
   -moz-transform-origin: left center;
@@ -121,7 +145,7 @@ header {
   transform-origin: left center;
 }
 
-#nav-icon4 span:nth-child(2) {
+#mobile-menu-icon span:nth-child(2) {
   /* top: 18px; */
   top: 12px;
   -webkit-transform-origin: left center;
@@ -130,7 +154,7 @@ header {
   transform-origin: left center;
 }
 
-#nav-icon4 span:nth-child(3) {
+#mobile-menu-icon span:nth-child(3) {
   /* top: 36px; */
   top: 24px;
   -webkit-transform-origin: left center;
@@ -139,7 +163,7 @@ header {
   transform-origin: left center;
 }
 
-#nav-icon4.open span:nth-child(1) {
+#mobile-menu-icon.open span:nth-child(1) {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
@@ -151,12 +175,12 @@ header {
   width: 38px;
 }
 
-#nav-icon4.open span:nth-child(2) {
+#mobile-menu-icon.open span:nth-child(2) {
   width: 0%;
   opacity: 0;
 }
 
-#nav-icon4.open span:nth-child(3) {
+#mobile-menu-icon.open span:nth-child(3) {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
@@ -169,7 +193,7 @@ header {
 }
 
 /* Button to top */
-#myBtn {
+#goToTopButton {
   display: none; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
   bottom: 10px; /* Place the button at X px from the bottom of the page */
@@ -187,12 +211,6 @@ header {
   border-radius: 4px; /* Rounded corners */
   font-size: 14px; /* Increase font size */
 }
-
-/*
-#myBtn:hover {
-  background-color: #555; Add a dark-grey background on hover
-}
-*/
 
 div .section {
   /* width: 100%; */
@@ -236,9 +254,9 @@ div .section {
     top: 0; /* La psn absolute décale vers le haut*/
     left: 0; /* Faut donc remettre à 0 Ha et Ga */
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.459); /* Permet de voir l'élément */
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px); /* Rendre l'arrière plan flou */
+    background-color: rgba(0, 0, 0, 0.7); /* Permet de voir l'élément */
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px); /* Rendre l'arrière plan flou */
     width: 100%; /* Prendre largeur écran */
     height: 100vh; /* Prendre hauteur écran */
     display: flex;
@@ -259,6 +277,6 @@ div .section {
 
   .navbar .nav-links ul li {
     margin: 25px 0; /* Ajoute 25pixels en Haba et 0 s/ GaDrà Ga et à Dr */
-    font-size: 1.2em; /* Agrandir un peu la police */
+    font-size: 1.8em; /* Agrandir un peu la police */
   }
 }

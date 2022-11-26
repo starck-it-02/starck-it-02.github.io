@@ -12,7 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet"
     />
-    <script src="/script.js"></script>
+    <script src="script.js"></script>
   </head>
   <body>
     <!-- <header id="headerSection"></header> -->
@@ -20,15 +20,35 @@
       <a href="#" class="logo">PULSARTER</a>
       <div class="nav-links">
         <ul>
-          <li class="active"><a href="#homeSection">Home</a></li>
-          <li><a href="#valuesSection">Values</a></li>
-          <li><a href="#projectsSection">Projects</a></li>
-          <li><a href="#picturesSection">Pictures</a></li>
-          <li><a href="#contactSection">Contact</a></li>
+          <li>
+            <a href="#homeSection" class="link hover-underline-animation active"
+              >Accueil</a
+            >
+          </li>
+          <li>
+            <a href="#valuesSection" class="link hover-underline-animation"
+              >Valeurs</a
+            >
+          </li>
+          <li>
+            <a href="#projectsSection" class="link hover-underline-animation"
+              >Projets</a
+            >
+          </li>
+          <li>
+            <a href="#picturesSection" class="link hover-underline-animation"
+              >Photos</a
+            >
+          </li>
+          <li>
+            <a href="#contactSection" class="link hover-underline-animation"
+              >Contact</a
+            >
+          </li>
         </ul>
       </div>
       <!-- <img src="img/menu-button-white.png" alt="menu hamburger" class="menu-hamburger"> -->
-      <div class="menu-hamburger" id="nav-icon4">
+      <div class="menu-hamburger" id="mobile-menu-icon">
         <span></span>
         <span></span>
         <span></span>
@@ -133,6 +153,8 @@
       </p>
     </div>
 
-    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <button onclick="goToTopFunction()" id="goToTopButton" title="Go to top">
+      Top
+    </button>
   </body>
 </html>
