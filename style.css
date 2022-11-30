@@ -1,5 +1,5 @@
+/* *************** GLOBAL RESET ******************************* */
 /* https://www.youtube.com/watch?v=HQopEEurQYE */
-/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -9,8 +9,11 @@
   /* background-color: darkgrey; */
 }
 
+/* *************** SETTINGS DE BASE *************************** */
 html {
   scroll-behavior: smooth;
+  /* https://www.youtube.com/watch?v=iGUSTyG-CYw&t=376s */
+  scroll-padding-top: var(--scroll-padding, 50px);
 }
 
 /* Setup de base */
@@ -19,26 +22,42 @@ body {
 }
 
 /* Set header dimensions à 100% page*/
+/*
 header {
   height: 100vh;
   width: 100vw;
   background-image: url(img/space_01.jpg);
-  background-size: cover; /* Couvre l'intégralité de l'écran */
+  background-size: cover; 
+  Couvre l'intégralité de l'écran
+}
+*/
+
+/* DIV WITH "SECTION" CLASS */
+div.section {
+  /* width: 100%; */
+  /* height: 200px; */
+  /* border: 1px solid red; */
+  /* background-color: lightgrey; */
+  /* position: relative; */
+  /* top: 0px; */
+  padding: 0px;
+  margin: 0px 5px 30px 5px;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
+/* *************** NAVBAR SETTINGS **************************** */
 .navbar {
-  /* Passe Navbar par dessus l'image */
-  /* position: absolute; */
+  /* position: absolute; */ /* Passe Navbar par dessus l'image */
   /* overflow: hidden; */
   background-color: #333;
-  padding: 10px 10px; /* Décolle NavBar des coins */
+  padding: 10px 10px; /* GaDr HaBa */
   display: flex; /* Aligne les éléments */
   justify-content: space-between; /* Ecarte les éléments */
   align-items: center; /* Aligne les éléments verticalement */
   width: 100%; /* Sur tte la largeur de l'écran */
   box-sizing: border-box; /* Empêche le débordement hors écran */
-  /* https://alvarotrigo.com/blog/sticky-navbar/ */
-  position: sticky;
+  position: sticky; /* https://alvarotrigo.com/blog/sticky-navbar/ */
   top: 0px;
 }
 
@@ -47,19 +66,16 @@ header {
 }
 
 .navbar .logo {
-  /* 2 fois plus grand que size actuelle */
-  font-size: 2em;
+  font-size: 2em; /* 2 x plus grand que size actuelle */
   font-weight: bold;
 }
 
 .navbar .nav-links ul {
-  /* Aligne ts les balise sur 1 ligne */
-  display: flex;
+  display: flex; /* Aligne ts les balise sur 1 ligne */
 }
 
 .navbar .nav-links ul li {
-  /* Ajoute 25pixels à Ga et à Dr */
-  margin: 0 25px;
+  margin: 0 25px; /* Ajoute 25pixels à Ga et à Dr */
 }
 
 /* Set élément actif en rouge */
@@ -68,6 +84,7 @@ header {
   font-weight: 600;
 }
 
+/* *************** NAVBAR ANIMATIONS - MOUSE OVER ************* */
 .hover-underline-animation {
   display: inline-block;
   position: relative;
@@ -92,6 +109,7 @@ header {
   transform-origin: bottom left;
 }
 
+/* *************** MENU HAMBURGER ANIMATIONS ****************** */
 .navbar .menu-hamburger {
   display: none;
   position: relative;
@@ -192,12 +210,12 @@ header {
   width: 38px;
 }
 
-/* Button to top */
+/* *************** BUTTON BACK TO THE TOP ********************* */
 #goToTopButton {
   display: none; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
-  bottom: 10px; /* Place the button at X px from the bottom of the page */
-  right: 10px; /* Place the button at X px from the right */
+  bottom: 10px; /* Place button at X px from page bottom */
+  right: 10px; /* Place button at X px from the right */
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
@@ -212,24 +230,7 @@ header {
   font-size: 14px; /* Increase font size */
 }
 
-div .section {
-  /* width: 100%; */
-  /* height: 200px; */
-  /* border: 1px solid red; */
-  /* background-color: lightgrey; */
-  /* position: relative; */
-  /* top: 0px; */
-  margin: 10px 10px;
-  text-align: justify;
-  text-justify: inter-word;
-}
-
-/* Page content */
-.content {
-  padding: 16px;
-}
-
-/* Responsive */
+/* *************** RESPONSIVE BEHAVIOURS ********************** */
 @media screen and (max-width: 900px) {
   .navbar {
     /* padding: 0; */
@@ -251,7 +252,7 @@ div .section {
   }
 
   .nav-links {
-    top: 0; /* La psn absolute décale vers le haut*/
+    top: 0; /* Posn absolute décale vers le haut*/
     left: 0; /* Faut donc remettre à 0 Ha et Ga */
     position: absolute;
     background-color: rgba(0, 0, 0, 0.7); /* Permet de voir l'élément */
@@ -262,8 +263,8 @@ div .section {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: -100%; /* Cache le menu à gauche */
-    transition: all 0.5s ease; /* Ajoute translation en 0.35s linéaire*/
+    margin-left: -100%; /* Cache menu à gauche */
+    transition: all 0.5s ease; /* Transition linéaire de 0.35s */
   }
 
   .nav-links.mobile-menu {
@@ -276,7 +277,7 @@ div .section {
   }
 
   .navbar .nav-links ul li {
-    margin: 25px 0; /* Ajoute 25pixels en Haba et 0 s/ GaDrà Ga et à Dr */
-    font-size: 1.8em; /* Agrandir un peu la police */
+    margin: 25px 0; /* 25px Haba et 0 GaDr */
+    font-size: 1.8em; /* 1.8 x taille police actuelle */
   }
 }
