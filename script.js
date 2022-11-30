@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
-   
-    // Hamburger button animations
+    
+    /* ===== HAMBURGER BUTTON ANIMATIONS ===== */
     const mobileMenuIcon = document.getElementById("mobile-menu-icon");
     mobileMenuIcon.addEventListener("click", () => {
         mobileMenuIcon.classList.toggle("open");
         console.log("testVanilla");
     });
     
-    // Menu slider moves
+    /* ===== MENU SLIDER MOVES ===== */
     const menuHamburger = document.querySelector(".menu-hamburger");
     const navLinks = document.querySelector(".nav-links");
     menuHamburger.addEventListener("click", () => {
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log("hello4");
     });
     
-    // Button to top
+    /* ===== BUTTON BACK TO THE TOP OF PAGE ===== */
     const mybutton = document.getElementById("goToTopButton");
 
     // When the user scrolls down 20px from the top of the document, show the button
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Navbar menuLinks animations
+    /* ===== NAVBAR MENULINKS ANIMATIONS ===== */
     // https://bobbyhadz.com/blog/javascript-add-event-listener-to-all-elements-with-class
     const menuLinks = document.querySelectorAll(".link");
     menuLinks.forEach(link => {
@@ -44,10 +44,17 @@ document.addEventListener('DOMContentLoaded', () => {
         })   
     });    
 
+    /* ===== STOP NAVBAR COVERING CONTENT ON SCROLL ===== */
+    // https://www.youtube.com/watch?v=iGUSTyG-CYw&t=376s
+    const navigationHeight = document.querySelector(".navbar").offsetHeight;
+    // console.log(document.documentElement);
+    document.documentElement.style.setProperty('--scroll-padding',navigationHeight+"px");
+    console.log(document.querySelector(".navbar").offsetHeight);
+
 }, false);
 
 // When the user clicks on the button, scroll to the top of the document
 function goToTopFunction() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
+}   
