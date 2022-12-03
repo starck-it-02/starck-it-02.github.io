@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // https://www.youtube.com/watch?v=iGUSTyG-CYw&t=376s
     const navigationHeight = document.querySelector(".navbar").offsetHeight;
     // console.log(document.documentElement);
-    document.documentElement.style.setProperty('--scroll-padding',navigationHeight+"px");
+    document.documentElement.style.setProperty('--scroll-padding',navigationHeight+11+"px");
     console.log(document.querySelector(".navbar").offsetHeight);
 
 }, false);

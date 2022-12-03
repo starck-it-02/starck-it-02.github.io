@@ -5,7 +5,7 @@
   padding: 0;
   text-decoration: none;
   list-style: none; /*Retire puce des listes*/
-  /* border: 0.5px solid red; */
+  /* border: 0.1px solid red; */
   /* background-color: darkgrey; */
 }
 
@@ -40,8 +40,8 @@ div.section {
   /* background-color: lightgrey; */
   /* position: relative; */
   /* top: 0px; */
+  margin: 0px 10px 20px 10px;
   padding: 0px;
-  margin: 0px 5px 30px 5px;
   text-align: justify;
   text-justify: inter-word;
 }
