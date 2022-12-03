@@ -2,17 +2,26 @@ document.addEventListener('DOMContentLoaded', () => {
     
     /* ===== HAMBURGER BUTTON ANIMATIONS ===== */
     const mobileMenuIcon = document.getElementById("mobile-menu-icon");
+    const socialMobile = document.getElementById("socialMobile");
     mobileMenuIcon.addEventListener("click", () => {
+        
         mobileMenuIcon.classList.toggle("open");
-        console.log("testVanilla");
+        
+        console.log('Avant: ' + window.getComputedStyle(socialMobile).display);
+        socialMobile.style.display == 'block'? socialMobile.style.display = 'none': socialMobile.style.display = 'block';
+        console.log('Apres: ' + window.getComputedStyle(socialMobile).display);     
+        //else {socialMobile.style.display = "none";}
+        // console.log("testVanilla");
     });
     
     /* ===== MENU SLIDER MOVES ===== */
     const menuHamburger = document.querySelector(".menu-hamburger");
     const navLinks = document.querySelector(".nav-links");
+
+
     menuHamburger.addEventListener("click", () => {
-        navLinks.classList.toggle("mobile-menu");
-        console.log("hello4");
+        navLinks.classList.toggle("mobile-menu");    
+        // console.log("hello4");
     });
     
     /* ===== BUTTON BACK TO THE TOP OF PAGE ===== */
@@ -29,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    /* ===== NAVBAR MENULINKS ANIMATIONS ===== */
+    /* ===== NAVBAR LINKS OVER ANIMATIONS ===== */
     // https://bobbyhadz.com/blog/javascript-add-event-listener-to-all-elements-with-class
     const menuLinks = document.querySelectorAll(".link");
     menuLinks.forEach(link => {
@@ -49,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navigationHeight = document.querySelector(".navbar").offsetHeight;
     // console.log(document.documentElement);
     document.documentElement.style.setProperty('--scroll-padding',navigationHeight+11+"px");
-    console.log(document.querySelector(".navbar").offsetHeight);
+    // console.log(document.querySelector(".navbar").offsetHeight);
 
 }, false);
 

@@ -40,7 +40,7 @@ div.section {
   /* background-color: lightgrey; */
   /* position: relative; */
   /* top: 0px; */
-  margin: 0px 10px 20px 10px;
+  margin: 0px 10px;
   padding: 0px;
   text-align: justify;
   text-justify: inter-word;
@@ -230,6 +230,10 @@ div.section {
   font-size: 14px; /* Increase font size */
 }
 
+#socialMobile {
+  display: none;
+}
+
 /* *************** RESPONSIVE BEHAVIOURS ********************** */
 @media screen and (max-width: 900px) {
   .navbar {
@@ -244,6 +248,7 @@ div.section {
     /* top: 0px;*/
     /* left: 0px;  */
   }
+
   .navbar .menu-hamburger {
     display: block;
     position: relative;
@@ -264,7 +269,7 @@ div.section {
     justify-content: center;
     align-items: center;
     margin-left: -100%; /* Cache menu à gauche */
-    transition: all 0.5s ease; /* Transition linéaire de 0.35s */
+    transition: all 0.5s ease; /* Transition linéaire de 0.5s */
   }
 
   .nav-links.mobile-menu {
@@ -277,7 +282,7 @@ div.section {
   }
 
   .navbar .nav-links ul li {
-    margin: 25px 0; /* 25px Haba et 0 GaDr */
+    margin: 12px 0; /* 25px Haba et 0 GaDr */
     font-size: 1.8em; /* 1.8 x taille police actuelle */
   }
 }
