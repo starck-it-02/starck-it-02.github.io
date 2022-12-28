@@ -211,6 +211,7 @@ div.section {
     /* padding: 0; */
     position: sticky;
     top: 0px;
+    display: none;
   }
 
   .navbar .logo {
@@ -267,6 +268,15 @@ div.section {
 
   svg.bi-facebook {
     margin-left: -4px;
+  }
+
+  #landing-logo {
+    padding-top: 0;
+    background: url(../img/logo_main.png) no-repeat 50% 50%;
+    background-size: 95%; /*Empeche image */
+    background-color: black;
+    height: 100vh;
+    position: relative;
   }
 
   #goToTopButton {
