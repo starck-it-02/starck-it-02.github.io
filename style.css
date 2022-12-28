@@ -207,6 +207,17 @@ div.section {
 
 /* *************** RESPONSIVE BEHAVIOURS ********************** */
 @media screen and (max-width: 900px) {
+  /* https://dev.to/fenok/stretching-body-to-full-viewport-height-the-missing-way-2ghd#:~:text=Here%2C%20100vh%20means%20that%20the,grow%20even%20more%20if%20necessary. */
+  html {
+    min-height: 100%; /* Look, it's not fixed anymore! */
+    display: flex;
+    flex-direction: column;
+  }
+
+  body {
+    flex-grow: 1;
+  }
+
   .navbar {
     /* padding: 0; */
     position: sticky;
