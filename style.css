@@ -283,7 +283,7 @@ div.section {
 
   #landing-logo {
     padding-top: 0;
-    background: url(../img/logo_main.png) no-repeat 55% 45%;
+    background: url(../img/logo_main.png) no-repeat 50% 40%;
     background-size: 95%; /*Empeche débordement*/
     background-color: black;
     height: 100vh;
