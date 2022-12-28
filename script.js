@@ -2,15 +2,14 @@ document.addEventListener('DOMContentLoaded', () => {
     
     /* ===== HAMBURGER BUTTON ANIMATIONS ===== */
     const mobileMenuIcon = document.getElementById("mobile-menu-icon");
-    const socialMobile = document.getElementById("socialMobile");
+    //const socialMobile = document.getElementById("socialMobile");
     mobileMenuIcon.addEventListener("click", () => {
         
         mobileMenuIcon.classList.toggle("open");
         
-        console.log('Avant: ' + window.getComputedStyle(socialMobile).display);
-        socialMobile.style.display == 'block'? socialMobile.style.display = 'none': socialMobile.style.display = 'block';
-        console.log('Apres: ' + window.getComputedStyle(socialMobile).display);     
-        //else {socialMobile.style.display = "none";}
+        // console.log('Avant: ' + window.getComputedStyle(socialMobile).display);
+        // socialMobile.style.display == 'block'? socialMobile.style.display = 'none': socialMobile.style.display = 'block';
+        // console.log('Apres: ' + window.getComputedStyle(socialMobile).display);     
         // console.log("testVanilla");
     });
     
@@ -57,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // https://www.youtube.com/watch?v=iGUSTyG-CYw&t=376s
     const navigationHeight = document.querySelector(".navbar").offsetHeight;
     // console.log(document.documentElement);
-    document.documentElement.style.setProperty('--scroll-padding',navigationHeight+11+"px");
+    document.documentElement.style.setProperty('--scroll-padding',navigationHeight+9+"px");
     // console.log(document.querySelector(".navbar").offsetHeight);
 
 }, false);

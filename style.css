@@ -27,7 +27,7 @@ header {
   height: 100vh;
   width: 100vw;
   background-image: url(img/space_01.jpg);
-  background-size: cover; 
+  background-size: cover;
   Couvre l'intégralité de l'écran
 }
 */
@@ -216,7 +216,7 @@ div.section {
   position: fixed; /* Fixed/sticky position */
   bottom: 10px; /* Place button at X px from page bottom */
   right: 10px; /* Place button at X px from the right */
-  z-index: 99; /* Make sure it does not overlap */
+  z-index: 10; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
   background-color: red; /* Set a background color */
@@ -230,7 +230,7 @@ div.section {
   font-size: 14px; /* Increase font size */
 }
 
-#socialMobile {
+.social-icons {
   display: none;
 }
 
@@ -247,6 +247,7 @@ div.section {
     position: relative;
     /* top: 0px;*/
     /* left: 0px;  */
+    /* z-index: 999; */
   }
 
   .navbar .menu-hamburger {
@@ -254,6 +255,7 @@ div.section {
     position: relative;
     /* top: 0px; */
     /* right: 0px; */
+    z-index: 999;
   }
 
   .nav-links {
@@ -270,19 +272,40 @@ div.section {
     align-items: center;
     margin-left: -100%; /* Cache menu à gauche */
     transition: all 0.5s ease; /* Transition linéaire de 0.5s */
+    z-index: 97;
   }
 
   .nav-links.mobile-menu {
     margin-left: 0;
+    z-index: 999;
   }
 
   .nav-links ul {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
   .navbar .nav-links ul li {
     margin: 12px 0; /* 25px Haba et 0 GaDr */
     font-size: 1.8em; /* 1.8 x taille police actuelle */
+  }
+
+  li.social-icons {
+    display: block;
+    padding-left: 4px;
+  }
+
+  a.social-icon {
+    zoom: 1.5;
+  }
+
+  svg.bi-facebook {
+    /* background-color: #e31c18; */
+    margin-left: -4px;
+  }
+
+  #goToTopButton {
+    z-index: -1;
   }
 }
