@@ -298,7 +298,7 @@ div.section {
   .scroll-down {
     position: absolute;
     left: 50%;
-    bottom: 15%;
+    bottom: 20%;
     display: block;
     text-align: center;
     font-size: 20px;
