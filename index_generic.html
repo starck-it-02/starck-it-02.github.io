@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<!-- 
+    <!DOCTYPE html> est le type de document. de nos jours personne ne se soucie vraiment d'eux, 
+    et ils sont juste un artefact historique qui doit être inclus pour que tout fonctionne bien.
+-->
+<html lang="en">
+  <!-- 
+        Enfin, il convient de mentionner la langue de votre page. Cela peut être fait en ajoutant l'attribut lang 
+        à la balise ouvrante HTML (voir meta-example.html.) Ceci est utile de plusieurs façons. Votre document sera 
+        indexé plus efficacement par les moteurs de recherche si son langage est défini
+    -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta charset="utf-8"> : cet élément définit que le jeu de caractères à utiliser pour votre document est UTF-8. -->
+
+    <!-- 
+    Les métadonnées sont des données qui décrivent des données, et le langage HTML a une manière « officielle » d'ajouter 
+    des métadonnées à un document — l'élément <meta>. 
+    -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- 
+        Il est utile d'inclure ces deux méta-éléments dans votre page pour définir son auteur et 
+        donner une courte description de son contenu.
+     -->
+    <meta name="author" content="Francois Starck" />
+
+    <!-- La description est aussi utilisée dans le résultat des moteurs de recherche (SEO)-->
+    <meta
+      name="description"
+      content="La Zone Apprentissage des documents web du MDN a pour but de donner aux débutants du 
+        Web tout ce qu'ils doivent savoir pour commencer le développement de pages webs et d'applications."
+    />
+
+    <!-- 
+        En parcourant le web, vous trouverez d'autres types de métadonnées. Par exemple, Open Graph Data est un 
+        protocole de métadonnées que Facebook a inventé pour fournir des métadonnées plus riches pour les sites webs.
+        Dans le code source de MDN vous trouverez ceci :
+    -->
+    <meta
+      property="og:image"
+      content="https://developer.mozilla.org/static/img/opengraph-logo.png"
+    />
+    <meta
+      property="og:description"
+      content="MDN Web Docs fournit des informations sur les technologies web ouvertes comme HTML, CSS et les API
+        utilisées pour les sites web et les applications web. On y trouve également de la documentation destinées 
+        aux développeurs à propos des produits Mozilla tels que les outils de développement de Firefox."
+    />
+    <meta property="og:title" content="Mozilla Developer Network" />
+
+    <!-- Twitter a aussi une métadonnée propriétaire, qui a un effet similaire quand l'URL du site est affichée sur twitter.com. Par exemple: -->
+    <meta name="twitter:title" content="Mozilla Developer Network" />
+
+    <!-- 
+        La petite favicône, qui existe depuis de nombreuses années, a été la première icône de ce type, une icône de 16 x 16 pixels utilisée 
+        dans de multiples endroits. 
+    -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- 
+        Il existe de nombreux autres types d'icônes à considérer aussi actuellement. 
+        Plus d'exemple, voir https://developer.mozilla.org/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
+    -->
+
+    <!-- 
+        L'élément <link> se situe toujours dans l'en-tête du document. Il comporte deux attributs, rel="stylesheet" 
+        indiquant qu'il s'agit de la feuille de style du document, et href indiquant le chemin d'accès au fichier la 
+        contenant : 
+    -->
+    <link rel="stylesheet" href="mon_fichier_css.css" />
+  </head>
+  <body>
+    <!-- 
+        Pour mettre en œuvre le marquage sémantique, HTML fournit des balises dédiées que vous pourrez utiliser pour représenter 
+        ces parties, par exemple :
+            -header : <header>.
+            -barre de navigation : <nav>.
+            -contenu principal : <main>, avec diverses sous‑sections de contenu représentées à l'aide de des éléments <article>, <section> et <div>.
+            -barre latérale : <aside> ; souvent mise à l'intérieur de l'élément <main>.
+            -pied de page : <footer>. 
+    -->
+
+    <!-- 
+        Plus de détails à propos des éléments de mise en page
+        La compréhension détaillée de la signification globale de tous les éléments de la mise en page HTML est importante — 
+        vous l'acquerrez au fur et à mesure avec l'expérience dans le développement web. Vous pouvez trouver beaucoup de détails en
+        parcourant la référence aux éléments HTML. Pour l'instant, il convient de bien comprendre les principales définitions :
+
+        <main> est relatif au contenu unique de la page. N'utilisez <main> que une seule fois par page et placez-le directement à l'intérieur 
+               de l'élement <body>. Idéalement, il ne devrait pas être imbriqué dans d'autres éléments.
+        <article> entoure un bloc de contenu en relation constituant en soi une unité de sens pris isolément par rapport au reste de la page
+                  (par ex. un unique billet de blog.)
+        <section> ressemble à <article>, mais sert plutôt à contenir une partie isolée de la page constituant un élément de fonctionnalité en soi 
+                  (par ex. une petite carte ou un ensemble d'intitulés d'article ou de résumés). Il est considéré de bonne pratique de commencer 
+                  chaque section par un heading ; notez également que vous pouvez fractionner un <article> en plusieurs <section> ou bien des 
+                  <section> en divers <article>, selon le contexte.
+        <aside> contient les composantes non directement liées au contenu principal mais pouvant fournir des informations supplémentaires indirectement
+                en relation avec ce dernier (entrées de glossaire, biographie de l'auteur, liens connexes, etc).
+        <header> représente un groupe de contenus introductoires. Enfant de <body>, il définit l'en-tête général de la page web, mais enfant de 
+                 <article> ou <section> il définit un en‑tête propre à cette section (ne confondez pas titles et headings).
+        <nav> contient les éléments principaux de navigation pour la page. Les liens secondaires, etc., n'entrent pas dans la navigation.
+        <footer> représente un groupe de contenu de fin pour une page.
+        
+        Enveloppes non‑sémantiques
+        Parfois, vous êtes dans la situation où vous ne trouvez pas l'élément sémantique idéal pour regrouper certaines entités ou envelopper certains 
+        contenus. D'autres fois, vous souhaitez simplement regrouper un ensemble d'éléments pour en faire une entité unique pour des CSS ou des JavaScript.
+        Pour de tels cas, HTML met à votre disposition les éléments <div> et <span>}. Utilisez‑les de préférence avec un attribut class approprié, en quelque 
+        sorte étiquetez‑les pour pouvoir les cibler plus facilement.
+
+        <span> est un élément en ligne non-semantique ; vous l'utiliserez seulement si vous ne trouvez pas de meilleur élément de sémantique textuelle 
+               pour envelopper votre contenu, ou bien si vous ne voulez pas ajouter de signification particulière.
+
+        <div> est un élément de niveau bloc non-semantique ; vous l'utiliserez seulement si vous ne trouvez pas de meilleur bloc de sémantique
+              à utiliser, ou bien si vous ne voulez pas ajouter de signification particulière. Par exemple, imaginez un widget de panier d'achat 
+              que vous pourriez choisir d'afficher à n'importe quel moment sur un site de commerce électronique
+    -->
+
+    <!--
+        Il est préférable de n'utiliser qu'un seul <h1> par page — c'est le niveau principal, et tous les autres devraient 
+        être de niveau inférieur. Assurez-vous d'utiliser les balise de titre dans l'ordre correct et logique : <h1> puis <h2>, 
+        puis <h3> et ainsi de suite. Bien qu'il y ait 6 niveaux de titre (de <h1> à <h6>), Il est déconseillé d'utiliser plus 
+        de trois niveaux dans une page. Les documents avec beaucoup de niveaux deviennent complexes et difficiles à parcourir.
+        Dans ce cas, il est préférable de partager le contenu sur plusieurs pages.
+        Les moteurs de recherche, lorsqu'ils indexent votre page, prennent en considération les titres en tant que mots‑clés ceµ
+        qui influe sur le classement de la page lors d'une recherche. Sans titre, une page aura un faible référencement (SEO) 
+    -->
+    <!-- 
+        C'est un élément <span>. Il n'a pas de valeur sémantique. Il s'utilise autour d'un contenu auquel vous souhaitez appliquer 
+        un style CSS (ou le modifier avec du JavaScript) sans lui donner une signification supplémentaire 
+    -->
+    <!-- Liste ordonnée -->
+    <ol>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ol>
+    <!-- Liste non-ordonnée -->
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <!-- Pour les balises suivantes, voir doc MDN -->
+    <em></em>
+    <strong></strong>
+    <span></span>
+    <!-- Plus anciennes et plus confuses, voir idem -->
+    <b></b>
+    <i></i>
+    <u></u>
+
+    <!-- Attributs et conseils: voir doc MDN-->
+    <a href="http://www.exemple.com" title="Lien vers exemple X"
+      >Un lien vers mon exemple X.</a
+    >
+    <a
+      href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=fr-FR"
+      download="firefox-latest-64bit-installer.exe"
+    >
+      Télécharger la version de Firefox pour Windows la plus récente
+      (64-bit)(français, France)
+    </a>
+    <a href="mailto:nullepart@mozilla.org">Envoyer un courriel à nullepart</a>
+    <a
+      href="mailto:nullepart@mozilla.org?cc=nom2@rapidtables.com&bcc=nom3@rapidtables.com&subject=L%27objet%20du%20courriel&body=Le%20corps%20du%20courriel"
+    >
+      Envoyer un mail avec copie, copie cachée, sujet et corps de message
+    </a>
+
+    <!-- Attributs booléens -->
+    <!-- La présence de l'attribut disabled empêche l'utilisateur final d'entrer du texte dans le champ de saisie -->
+    <input type="text" disabled />
+    <!-- La saisie de texte est autorisée puisque l'attribut disabled est omis -->
+    <input type="text" />
+
+    <!-- Une entité HTML est une chaîne de texte (string) qui commence par (&) et se termine avec (;) -->
+    <!-- https://html.spec.whatwg.org/multipage/named-characters.html -->
+    <a href="http://www.exemple.com" title="N'est-ce pas drôle ?"
+      >Un lien vers mon exemple.</a
+    >
+
+    <!-- Exemple de citation en ligne -->
+    <p>
+      L'élément citation — <code>&lt;q&gt;</code> — est
+      <q cite="/fr/docs/Web/HTML/Element/q"
+        >prévu pour de courtes citations ne nécessitant pas un nouvel alinéa</q
+      >.
+    </p>
+
+    <!-- Listes descriptives -->
+    <dl>
+      <dt>aparté</dt>
+      <dd>
+        Dans une pièce de théâtre, action d'un acteur partageant une tirade
+        uniquement avec le public en vue de produire un effet dramatique ou
+        humoristique. Il s'agit le plus souvent d'un sentiment, d'une pensée
+        secrète ou d'une information sur le contexte.
+      </dd>
+      <dd>
+        En écriture, une partie de contenu relative au sujet en cours, mais qui,
+        ne s'inscrivant pas dans le flux principal du contenu, est donc
+        présentée à part (souvent dans un encadré sur le côté).
+      </dd>
+    </dl>
+
+    <!-- Abréviations -->
+    <p>
+      Nous utilisons l'<abbr title="Hypertext Markup Language">HTML</abbr> pour
+      structurer nos documents web.
+    </p>
+
+    <!-- Balisage des détails de contact -->
+    <address>
+      <p>Chris Mills, Manchester, The Grim North, UK</p>
+    </address>
+    <!-- 
+        L'élément <script> ne doit pas aller dans l'en-tête ; en fait, il est souvent préférable de le placer 
+            au bas du corps du document (juste avant la balise de clôture </body>), pour s'assurer que tout le 
+            contenu HTML a été lu par le navigateur avant de lui appliquer le JavaScript (si JavaScript essaie 
+            d'accéder à un élément qui n'existe pas encore, le navigateur déclenchera une erreur). 
+    -->
+    <script src="mon-fichier-js.js"></script>
+  </body>
+</html>
